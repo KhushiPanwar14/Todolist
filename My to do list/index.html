@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Sets the viewport to ensure the page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to an external stylesheet for styling the page -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Sets the title of the web page -->
+    <title>To Do LIST</title>
+</head>
+<body>
+    <!-- Main container for the To Do List application -->
+    <div class="container">
+        <!-- Div for the header section -->
+        <div class="n2">
+            <!-- Main heading of the application -->
+            <h1>TO DO LIST</h1>
+        </div>
+        <!-- Div for the search functionality -->
+        <div class="search">
+            <!-- Input field for searching tasks by title -->
+            <input type="text" id="search-input" placeholder="Search by Task Title">
+            <!-- Button to trigger the search functionality -->
+            <button id="search-btn">Search</button>
+        </div>
+        <!-- Form for adding new tasks -->
+        <form id="task-form">
+            <!-- Input field for task title, required for submission -->
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <!-- Input field for task description, required for submission -->
+            <input type="text" id="task-description" placeholder="Task Description" required>
+            <!-- Dropdown menu for selecting sort option -->
+            <select id="sort-select">
+                <!-- Default sorting option -->
+                <option value="default">Sort by</option>
+                <!-- Option to sort tasks by due date -->
+                <option value="dueDate">Due Date</option>
+            </select>
+            <!-- Input field for task due date, required for submission -->
+            <input type="date" id="task-due-date" required>
+            <!-- Dropdown menu for selecting task category -->
+            <select id="task-category">
+                <!-- Option for categorizing task as work -->
+                <option value="work">Work</option>
+                <!-- Option for categorizing task as personal -->
+                <option value="personal">Personal</option>
+            </select>
+            <!-- Button to add the task, submits the form -->
+            <button type="submit">Add Task</button>
+        </form>
+        <!-- Div for controls such as filters and clear button -->
+        <div class="controls">
+            <!-- Div for task filters -->
+            <div class="filters">
+                <!-- Span to filter all tasks, initially active -->
+                <span class="active" id="all">All</span>
+                <!-- Span to filter pending tasks -->
+                <span id="pending">Pending</span>
+                <!-- Span to filter completed tasks -->
+                <span id="completed">Completed</span>
+            </div>
+            <!-- Button to clear all tasks -->
+            <button class="clear-btn">Clear All</button>
+        </div>
+        <!-- Div where the list of tasks will be displayed -->
+        <div id="task-list"></div>
+    </div>
+    <!-- Links to an external JavaScript file for functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
